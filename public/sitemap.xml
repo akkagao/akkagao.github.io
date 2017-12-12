@@ -3,62 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://akka.github.io/links/</loc>
+    <loc>http://akkagao.github.io/links/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akka.github.io/about/</loc>
+    <loc>http://akkagao.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akka.github.io/golang/golang/</loc>
+    <loc>http://akkagao.github.io/golang/golang/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akka.github.io/post/use-hugo-create-blog/</loc>
+    <loc>http://akkagao.github.io/post/use-hugo-create-blog/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akka.github.io/categories/</loc>
+    <loc>http://akkagao.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akka.github.io/</loc>
+    <loc>http://akkagao.github.io/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akka.github.io/golang/</loc>
+    <loc>http://akkagao.github.io/golang/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akka.github.io/tags/hugo/</loc>
-    <lastmod>2017-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://akka.github.io/tags/hugo-nuo/</loc>
+    <loc>http://akkagao.github.io/tags/hugo/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akka.github.io/post/</loc>
+    <loc>http://akkagao.github.io/tags/hugo-nuo/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akka.github.io/tags/</loc>
+    <loc>http://akkagao.github.io/post/</loc>
+    <lastmod>2017-12-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://akkagao.github.io/tags/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
