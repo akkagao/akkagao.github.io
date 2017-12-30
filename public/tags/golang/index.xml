@@ -18,9 +18,7 @@
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://akkagao.github.io/post/jdspider/</guid>
-      <description>&lt;h1 id=&#34;golang使用goquery抓取京东商品价格demo&#34;&gt;Golang使用goquery抓取京东商品价格Demo&lt;/h1&gt;
-
-&lt;p&gt;github 地址&lt;a href=&#34;https://github.com/akkagao/jdSpider&#34;&gt;https://github.com/akkagao/jdSpider&lt;/a&gt;
+      <description>&lt;p&gt;github 地址&lt;a href=&#34;https://github.com/akkagao/jdSpider&#34;&gt;https://github.com/akkagao/jdSpider&lt;/a&gt;
 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

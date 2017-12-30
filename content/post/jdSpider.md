@@ -6,8 +6,6 @@ date: 2017-12-30
 description: “Golang使用goquery抓取京东商品价格Demo”
 ---
 
-
-# Golang使用goquery抓取京东商品价格Demo
 github 地址[https://github.com/akkagao/jdSpider](https://github.com/akkagao/jdSpider)
 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫
 
