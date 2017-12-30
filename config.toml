@@ -26,7 +26,7 @@ copyright = "© This post is licensed under a Creative Commons Attribution-NonCo
   name = "Works"
   weight = 20
   identifier = "works"
-  url = "https://github.com/crazy-wolf"
+  url = "https://github.com/akkagao"
 
 [[menu.main]]
   name = "Tags"
@@ -45,11 +45,11 @@ copyright = "© This post is licensed under a Creative Commons Attribution-NonCo
 
   # Choose your social networks
   email = "cmdgjw@hotmail.com"
-  github = "github_username"
-  twitter = "twitter_username"
-  linkedin = "linkedin_username"
-  weibo = "weibo_username"
-  wechat= "/img/qrcode.jpg" # Replace with your wechat qrcode image
+  github = "akkagao"
+  #twitter = "twitter_username"
+  #linkedin = "linkedin_username"
+  #weibo = "weibo_username"
+  #wechat= "/img/qrcode.jpg" # Replace with your wechat qrcode image
   # facebook = "facebook_username"
   # google = "googlplus_id_number"
   # instagram = "instagram_username"

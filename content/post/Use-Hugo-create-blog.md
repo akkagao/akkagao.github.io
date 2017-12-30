@@ -3,6 +3,7 @@ title: 使用Hugo搭建博客
 author: "CrazyWolf"
 tags: ["Hugo", "hugo-nuo"]
 date: 2017-12-12
+description: “使用Hugo搭建博客,hugo-nuo做为主题”
 ---
 
 ## 使用Hugo搭建博客
