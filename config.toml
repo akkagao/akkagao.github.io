@@ -36,11 +36,11 @@ copyright = "© This post is licensed under a Creative Commons Attribution-NonCo
 
 # Add your own params here
 [params]
-  author = "Ritchie Zhu"
+  author = "CrazyWolf"
   avatar = "/img/avatar.jpg"
-  seotitle = "Hugo Blog (SEO Version)"
+  seotitle = "CrazyWolf‘s Blog"
   subtitle = "~ 仰不愧于天，俯不怍于人 ~"
-  description = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
+  description = "CrazyWolf's blog"
   paginate = 10
 
   # Choose your social networks
