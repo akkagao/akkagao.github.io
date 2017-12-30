@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on CrazyWolf - Blog</title>
-    <link>https://akkagao.github.io/post/</link>
-    <description>Recent content in Posts on CrazyWolf - Blog</description>
+    <title>爬虫 on CrazyWolf - Blog</title>
+    <link>https://akkagao.github.io/tags/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on CrazyWolf - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
     <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://akkagao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://akkagao.github.io/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,19 +24,6 @@
 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>使用Hugo搭建博客</title>
-      <link>https://akkagao.github.io/post/use-hugo-create-blog/</link>
-      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://akkagao.github.io/post/use-hugo-create-blog/</guid>
-      <description> 使用Hugo搭建博客 Hugo安装 官网
-主题列表
-中文站
-本站使用主题 hugo-nuo
-启动脚本 hugo server --theme=hugo-nuo --buildDrafts</description>
     </item>
     
   </channel>

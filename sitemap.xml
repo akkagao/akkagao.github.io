@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://akkagao.github.io/post/jdspider/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://akkagao.github.io/post/use-hugo-create-blog/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
@@ -34,8 +39,20 @@
   </url>
   
   <url>
+    <loc>https://akkagao.github.io/tags/golang/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://akkagao.github.io/golang/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://akkagao.github.io/tags/goquery/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -53,13 +70,19 @@
   
   <url>
     <loc>https://akkagao.github.io/post/</loc>
-    <lastmod>2017-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://akkagao.github.io/tags/</loc>
-    <lastmod>2017-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://akkagao.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
