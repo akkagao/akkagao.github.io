@@ -290,7 +290,6 @@
 		<span style="color:#a6e22e">url</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;page=%d&#34;</span>, <span style="color:#a6e22e">i</span>)
 		<span style="color:#a6e22e">fetchData</span>(<span style="color:#a6e22e">url</span>)
 	}
-
 }
 
 <span style="color:#75715e">/**
@@ -303,7 +302,6 @@
 	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
 		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
 	}
-
 	<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">Header</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;User-Agent&#34;</span>, <span style="color:#e6db74">&#34;Mozilla/5.0 (Linux; U; Android 5.1; zh-cn; m1 metal Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.6 Mobile Safari/537.36&#34;</span>)
 
 	<span style="color:#a6e22e">response</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">request</span>)
@@ -327,7 +325,6 @@
 			<span style="color:#75715e">// 把获取到的数据追加到jdprive.txt 文件中，格式为  商品名称+四个制表符+价格+换行
 </span><span style="color:#75715e"></span>			<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">AppendToFile</span>(<span style="color:#e6db74">&#34;jdprive.txt&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\t\t\t\t&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">price</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>)
 		}
-
 	})
 }</code></pre></div>
 <h2 id="说明">说明</h2>
