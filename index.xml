@@ -40,6 +40,21 @@
     </item>
     
     <item>
+      <title>ECHO 学习Demo</title>
+      <link>https://akkagao.github.io/post/echodemo/</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://akkagao.github.io/post/echodemo/</guid>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;此项目GIT地址 &lt;a href=&#34;https://github.com/akkagao/echodemo&#34;&gt;https://github.com/akkagao/echodemo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;此项目主要用于学习使用传说中比其他Go web框架性能高10倍的&lt;a href=&#34;https://github.com/labstack/echo&#34;&gt;ECHO&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Golang使用goquery抓取京东商品价格</title>
       <link>https://akkagao.github.io/post/jdspider/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>

@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://akkagao.github.io/post/echodemo/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://akkagao.github.io/post/jdspider/</loc>
     <lastmod>2017-12-30T00:00:00+00:00</lastmod>
   </url>
@@ -35,6 +40,12 @@
   <url>
     <loc>https://akkagao.github.io/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://akkagao.github.io/tags/echo/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,6 +87,12 @@
   
   <url>
     <loc>https://akkagao.github.io/tags/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://akkagao.github.io/tags/web/</loc>
     <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

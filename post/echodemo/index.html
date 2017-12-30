@@ -5,11 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Tag → golang
-  
-   | CrazyWolf‘s Blog
-</title>
+  <title>ECHO 学习Demo</title>
 
   
   
@@ -20,20 +16,31 @@
 
   
   <meta name="author" content="CrazyWolf" />
-  <meta name="description" content="CrazyWolf&#39;s blog" />
+  <meta name="description" content="简介 此项目GIT地址 https://github.com/akkagao/echodemo
+此项目主要用于学习使用传说中比其他Go web框架性能高10倍的ECHO
+
+" />
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@gohugoio" />
-  <meta name="twitter:title" content="CrazyWolf‘s Blog" />
-  <meta name="twitter:description" content="CrazyWolf&#39;s blog" />
-  <meta name="twitter:image" content="https://akkagao.github.io/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="ECHO 学习Demo" />
+    <meta name="twitter:description" content="简介 此项目GIT地址 https://github.com/akkagao/echodemo
+此项目主要用于学习使用传说中比其他Go web框架性能高10倍的ECHO
+
+" />
+    <meta name="twitter:image" content="https://akkagao.github.io/img/avatar.jpg" />
+  
 
   
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CrazyWolf‘s Blog" />
-  <meta property="og:description" content="CrazyWolf&#39;s blog" />
-  <meta property="og:url" content="https://akkagao.github.io/tags/golang/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ECHO 学习Demo" />
+  <meta property="og:description" content="简介 此项目GIT地址 https://github.com/akkagao/echodemo
+此项目主要用于学习使用传说中比其他Go web框架性能高10倍的ECHO
+
+" />
+  <meta property="og:url" content="https://akkagao.github.io/post/echodemo/" />
   <meta property="og:image" content="https://akkagao.github.io/img/avatar.jpg" />
 
 
@@ -42,7 +49,7 @@
 <meta name="generator" content="Hugo 0.32-DEV" />
 
 
-<link rel="canonical" href="https://akkagao.github.io/tags/golang/" />
+<link rel="canonical" href="https://akkagao.github.io/post/echodemo/" />
 <link rel="alternative" href="https://akkagao.github.io/index.xml" title="CrazyWolf - Blog" type="application/atom+xml" />
 
 
@@ -106,6 +113,8 @@
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
       
+        
+      
     </div>
     
     
@@ -128,6 +137,8 @@
         <li class="menu-item
             
             
+            
+              is-active
             ">
             <a href="https://akkagao.github.io/">Home</a>
           </li>
@@ -222,45 +233,92 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">ECHO 学习Demo</h1>
+      <p class="post-meta">@CrazyWolf · Dec 30, 2017 · 1 min read</p>
     </header>
-    
+    <article class="post-content"><h2 id="简介">简介</h2>
+
+<p>此项目GIT地址 <a href="https://github.com/akkagao/echodemo">https://github.com/akkagao/echodemo</a></p>
+
+<p>此项目主要用于学习使用传说中比其他Go web框架性能高10倍的<a href="https://github.com/labstack/echo">ECHO</a></p>
+
+<p></p>
+
+<blockquote>
+<p>项目使用 glide 构建</p>
+</blockquote>
+
+<h2 id="项目中使用到包">项目中使用到包</h2>
+
+<p>日志： github.com/donnie4w/go-logger/logger</p>
+
+<p>单元测试：github.com/smartystreets/goconvey</p>
+
+<p>数据库查询：github.com/jmoiron/sqlx</p>
+
+<p>mysql驱动：github.com/go-sql-driver/mysql</p>
+
+<p>配置文件解析：github.com/BurntSushi/toml</p>
+
+<h2 id="使用说明">使用说明</h2>
+
+<ul>
+<li><p>执行 doc目录下的sql文件，创建数据库</p></li>
+
+<li><p>使用glide 构建项目，如果有包无法下载请自行想办法解决</p></li>
+
+<li><p>启动项目访问 <a href="http://localhost:8080/user.html">http://localhost:8080/user.html</a></p>
+
+<ul>
+<li><p>单元测试</p></li>
+
+<li><p>在service目录执行 <code>go test</code> 命令</p></li>
+
+<li><p>使用<code>goconvey</code>命令启动goconvey测试工具，查看测试结果。</p></li>
+</ul></li>
+</ul>
+
+<h2 id="开发体验">开发体验</h2>
+
+<p>​   之前开发项目有用过beego，Echo相比beego的开发体验差距还是蛮大的。beego已经是一个非常完善的web框架了。Echo的好处就是其他组件可以自由选择比如日志、数据库操作等</p>
+
+<p>​   Golang 的 web框架性能对比</p>
+
+<p>​    <a href="http://blog.csdn.net/qq849635649/article/details/56017559">http://blog.csdn.net/qq849635649/article/details/56017559</a></p>
+
+<p>​   <a href="http://colobu.com/2017/04/07/go-webframework-benchmark-2017-Spring/">http://colobu.com/2017/04/07/go-webframework-benchmark-2017-Spring/</a></p>
+
+<p>​   <a href="http://colobu.com/2016/04/06/the-fastest-golang-web-framework/">http://colobu.com/2016/04/06/the-fastest-golang-web-framework/</a></p>
+
+<p>选择 github.com/jmoiron/sqlx  作为数据库操作包的原因是个人对ORM没什么好感，ORM开发的时候时挺爽，但是如果接手维护一个老项目是用ORM写的就不爽了。想到一个长颈鹿和兔子的笑话</p>
+
+<pre><code>长颈鹿说：夏天喝水，凉水流过我长长的脖子，很凉快
+兔问：你吐过么？
+</code></pre>
+
+<p><strong>有疑问可以给我留言，或者发邮件给我（很长时间才会看一次邮件）。代码里注释很完善提问前请先看一下</strong></p>
+
+<p><strong>如果有大神发现有错误的地方，烦请赐教</strong></p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://akkagao.github.io/tags/golang"><span class="tag">Golang</span></a></li>
+        
+          <li><a href="https://akkagao.github.io/tags/echo"><span class="tag">ECHO</span></a></li>
+        
+          <li><a href="https://akkagao.github.io/tags/web"><span class="tag">Web</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.
+      </p>
+    </footer>
     
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://akkagao.github.io/post/jdspider/" class="post-link">Golang使用goquery抓取京东商品价格</a></h3>
-    <p class="post-meta">@CrazyWolf · Dec 30, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">github 地址https://github.com/akkagao/jdSpider 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://akkagao.github.io/post/jdspider/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://akkagao.github.io/post/echodemo/" class="post-link">ECHO 学习Demo</a></h3>
-    <p class="post-meta">@CrazyWolf · Dec 30, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">简介 此项目GIT地址 https://github.com/akkagao/echodemo
-此项目主要用于学习使用传说中比其他Go web框架性能高10倍的ECHO
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://akkagao.github.io/post/echodemo/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
     
   </section>
   <footer class="site-footer">
