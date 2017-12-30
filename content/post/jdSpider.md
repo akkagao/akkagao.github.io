@@ -63,7 +63,6 @@ func main() {
 		url := fmt.Sprintf("https://search.jd.com/Search?keyword=mac&enc=utf-8&wq=mac&page=%d", i)
 		fetchData(url)
 	}
-
 }
 
 /**
@@ -76,7 +75,6 @@ func fetchData(url string) {
 	if err != nil {
 		log.Println(err)
 	}
-
 	request.Header.Set("User-Agent", "Mozilla/5.0 (Linux; U; Android 5.1; zh-cn; m1 metal Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.6 Mobile Safari/537.36")
 
 	response, err := client.Do(request)
@@ -100,7 +98,6 @@ func fetchData(url string) {
 			// 把获取到的数据追加到jdprive.txt 文件中，格式为  商品名称+四个制表符+价格+换行
 			util.AppendToFile("jdprive.txt", title+"\t\t\t\t"+price+"\n")
 		}
-
 	})
 }
 ```
