@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Goquery on CrazyWolf - Blog</title>
-    <link>https://akkagao.github.io/tags/goquery/</link>
+    <link>http://blog.crazywolf.cc/tags/goquery/</link>
     <description>Recent content in Goquery on CrazyWolf - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
     <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://akkagao.github.io/tags/goquery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.crazywolf.cc/tags/goquery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Golang使用goquery抓取京东商品价格</title>
-      <link>https://akkagao.github.io/post/jdspider/</link>
+      <link>http://blog.crazywolf.cc/post/jdspider/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://akkagao.github.io/post/jdspider/</guid>
+      <guid>http://blog.crazywolf.cc/post/jdspider/</guid>
       <description>&lt;p&gt;github 地址&lt;a href=&#34;https://github.com/akkagao/jdSpider&#34;&gt;https://github.com/akkagao/jdSpider&lt;/a&gt;
 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫&lt;/p&gt;
 

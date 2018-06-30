@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Echo on CrazyWolf - Blog</title>
-    <link>https://akkagao.github.io/tags/echo/</link>
+    <link>http://blog.crazywolf.cc/tags/echo/</link>
     <description>Recent content in Echo on CrazyWolf - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
     <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://akkagao.github.io/tags/echo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.crazywolf.cc/tags/echo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ECHO 学习Demo</title>
-      <link>https://akkagao.github.io/post/echodemo/</link>
+      <link>http://blog.crazywolf.cc/post/echodemo/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://akkagao.github.io/post/echodemo/</guid>
+      <guid>http://blog.crazywolf.cc/post/echodemo/</guid>
       <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 
 &lt;p&gt;此项目GIT地址 &lt;a href=&#34;https://github.com/akkagao/echodemo&#34;&gt;https://github.com/akkagao/echodemo&lt;/a&gt;&lt;/p&gt;
