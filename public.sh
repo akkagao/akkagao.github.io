@@ -3,7 +3,7 @@ rm -rf public
 cd blog
 rm -rf public
 git checkout dev
-hugo --theme=hugo-nuo --baseUrl="http://blog.crazywolf.cc/"
+hugo --theme=hugo-nuo --baseUrl="https://akkagao.github.io/"
 git add .
 git commit -m "`date +%Y-%m-%d:%X` public dev"
 git push
