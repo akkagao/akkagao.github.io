@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Golang使用goquery抓取京东商品价格</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="CrazyWolf" />
+  <meta name="description" content="github 地址https://github.com/akkagao/jdSpider 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫
+" />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Golang使用goquery抓取京东商品价格" />
+    <meta name="twitter:description" content="github 地址https://github.com/akkagao/jdSpider 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫
+" />
+    <meta name="twitter:image" content="https://akkagao.github.io/img/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Golang使用goquery抓取京东商品价格" />
+  <meta property="og:description" content="github 地址https://github.com/akkagao/jdSpider 本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫
+" />
+  <meta property="og:url" content="https://akkagao.github.io/post/jdspider/" />
+  <meta property="og:image" content="https://akkagao.github.io/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.55.0-DEV" />
+
+
+<link rel="canonical" href="https://akkagao.github.io/post/jdspider/" />
+<link rel="alternative" href="https://akkagao.github.io/index.xml" title="CrazyWolf - Blog" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc" />
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587" />
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="CrazyWolf - Blog" />
+<meta name="msapplication-tooltip" content="CrazyWolf - Blog" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="https://akkagao.github.io/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://akkagao.github.io/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://akkagao.github.io/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="https://akkagao.github.io/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="https://akkagao.github.io/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="https://akkagao.github.io/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="https://akkagao.github.io/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="https://akkagao.github.io/img/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">CrazyWolf - Blog</h2>
+  
+  <p class="subtitle">~ 仰不愧于天，俯不怍于人 ~</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="https://akkagao.github.io/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="https://github.com/akkagao">Works</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="https://akkagao.github.io/tags/">Tags</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+      <li class="social-item">
+        <a href="mailto:cmdgjw@hotmail.com" title="Email"><span class="icon icon-email"></span></a>
+      </li>
+
+      
+      <li class="social-item">
+        <a href="//github.com/akkagao" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="https://akkagao.github.io/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Golang使用goquery抓取京东商品价格</h1>
+      <p class="post-meta">@CrazyWolf · Dec 30, 2017 · 1 min read</p>
+    </header>
+    <article class="post-content"><p>github 地址<a href="https://github.com/akkagao/jdSpider">https://github.com/akkagao/jdSpider</a>
+本文主要介绍基于goquery实现一个简单的京东商品价格数据爬虫</p>
+
+<h2 id="分析京东网页分页地址">分析京东网页分页地址</h2>
+
+<ul>
+<li>进入京东首页搜索mac，获取浏览器地址，下面的地址是无法分页抓取的</li>
+</ul>
+
+<p><a href="https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;pvid=7faaf245e0a74dfcbe6d80da0ffd9647">https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;pvid=7faaf245e0a74dfcbe6d80da0ffd9647</a></p>
+
+<ul>
+<li>点击页面底部分页按钮获取数据分页链接地址，继续点击分页链接，分析发现只是<code>page</code>参数和<code>s</code>参数会变化。多次尝试后发现只有<code>keyword</code>、<code>enc</code>、<code>wq</code>、<code>page</code>对页面搜索数据有影响</li>
+</ul>
+
+<p><a href="https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;qrst=1&amp;rt=1&amp;stop=1&amp;vt=2&amp;wq=mac&amp;page=3&amp;s=58&amp;click=0">https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;qrst=1&amp;rt=1&amp;stop=1&amp;vt=2&amp;wq=mac&amp;page=3&amp;s=58&amp;click=0</a></p>
+
+<blockquote>
+<p>keyword和wq为商品搜索内容这里使用 mac为关键字</p>
+
+<p>enc 指定返回数据字符集 这里为utf-8</p>
+</blockquote>
+
+<ul>
+<li>所以最终使用的抓取地址就是下面这个了，获取下一页数据只需要page加1就可以</li>
+</ul>
+
+<p><a href="https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;page=1">https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;page=1</a></p>
+
+<h2 id="分页网页结构">分页网页结构</h2>
+
+<ul>
+<li>获取主要内容组件 分析得到 id为&rdquo;J_goodsList&rdquo; 的div为主要内容列表</li>
+<li>里面UL列表为每个商品展示数据</li>
+<li>LI节点中 class为&rdquo;p-price&rdquo;的div为价格数据</li>
+<li>LI节点中class为&rdquo;p-name p-name-type-2&rdquo;的div为商品名称数据</li>
+</ul>
+
+<h2 id="安装依赖包">安装依赖包</h2>
+
+<p>此项目只是抓取数据存入本地文件，所以第三方包只依赖goquery</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">github.com/PuerkitoBio/goquery</code></pre></div>
+<h2 id="编码">编码</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;github.com/PuerkitoBio/goquery&#34;</span>
+	<span style="color:#e6db74">&#34;jdSpider/util&#34;</span>
+	<span style="color:#e6db74">&#34;log&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+	<span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#75715e">// 测试功能只抓取10页数据
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+		<span style="color:#a6e22e">url</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;https://search.jd.com/Search?keyword=mac&amp;enc=utf-8&amp;wq=mac&amp;page=%d&#34;</span>, <span style="color:#a6e22e">i</span>)
+		<span style="color:#a6e22e">fetchData</span>(<span style="color:#a6e22e">url</span>)
+	}
+}
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">抓取数据
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchData</span>(<span style="color:#a6e22e">url</span> <span style="color:#66d9ef">string</span>) {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">url</span>)
+	<span style="color:#a6e22e">client</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>{}
+	<span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#a6e22e">url</span>, <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;name=cjb&#34;</span>))
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">Header</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;User-Agent&#34;</span>, <span style="color:#e6db74">&#34;Mozilla/5.0 (Linux; U; Android 5.1; zh-cn; m1 metal Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/7.6 Mobile Safari/537.36&#34;</span>)
+
+	<span style="color:#a6e22e">response</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">request</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#75715e">// 使用NewDocumentFromResponse方式获取获取数据，是应为某些网页会有防止爬取限制，需要设置Header防止被限制
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromResponse</span>(<span style="color:#a6e22e">response</span>)
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	1：获取ID为J_goodsList 的div节点
+</span><span style="color:#75715e">	2：获取ul节点
+</span><span style="color:#75715e">	3：获取li节点列表
+</span><span style="color:#75715e">	*/</span>
+	<span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;div[id=\&#34;J_goodsList\&#34;]&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;ul&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;li&#34;</span>).<span style="color:#a6e22e">Each</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">selection</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Selection</span>) {
+		<span style="color:#75715e">// 获取class为p-name p-name-type-2 的div节点，然后获取em子节点的文字内容作为商品标题
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;div[class=\&#34;p-name p-name-type-2\&#34;]&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;em&#34;</span>).<span style="color:#a6e22e">Text</span>()
+		<span style="color:#75715e">// 获取class为p-price的节点，然后获取i标签中的文字作为价格
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">price</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.p-price&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;i&#34;</span>).<span style="color:#a6e22e">Text</span>()
+		<span style="color:#75715e">// 列表中有部分内容是广告内容，不属于标准商品数据，这里排除掉
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">title</span>) &gt; <span style="color:#ae81ff">1</span> {
+			<span style="color:#75715e">// 把获取到的数据追加到jdprive.txt 文件中，格式为  商品名称+四个制表符+价格+换行
+</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">AppendToFile</span>(<span style="color:#e6db74">&#34;jdprive.txt&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\t\t\t\t&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">price</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>)
+		}
+	})
+}</code></pre></div>
+<h2 id="说明">说明</h2>
+
+<p>京东网页HTML结构可能随时会变动，这个程序你看到的时候可能已经无法抓取到数据。但是按照上面的说明修改就可以很容易抓取新网页内容的数据。</p>
+
+<p>jdprive.txt 文件为抓取的内容数据</p>
+
+<p>项目doc目录下面的jd.html 文件是我写这个程序时候保存的网页数据</p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://akkagao.github.io/tags/golang"><span class="tag">Golang</span></a></li>
+        
+          <li><a href="https://akkagao.github.io/tags/goquery"><span class="tag">Goquery</span></a></li>
+        
+          <li><a href="https://akkagao.github.io/tags/%E7%88%AC%E8%99%AB"><span class="tag">爬虫</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.This post was published <strong>454</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2019 CrazyWolf - Blog</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="https://akkagao.github.io/js/bundle.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  </body>
+</html>
