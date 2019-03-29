@@ -31,14 +31,12 @@
     </item>
     
     <item>
-      <title>Go Mod 使用</title>
-      <link>https://akkagao.github.io/post/golang/</link>
+      <title>Go开发实战 go mod 使用本地包</title>
+      <link>https://akkagao.github.io/post/golang/golang/</link>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://akkagao.github.io/post/golang/</guid>
-      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;这里应该之展示在列表中&lt;/p&gt;</description>
+      <guid>https://akkagao.github.io/post/golang/golang/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;go mod 使用本地包的方法&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -75,26 +73,6 @@
 中文站
 本站使用主题 hugo-nuo
 启动脚本 hugo server --theme=hugo-nuo --buildDrafts</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://akkagao.github.io/golang/golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://akkagao.github.io/golang/golang/</guid>
-      <description>&lt;p&gt;​&amp;mdash;
-title: ECHO 学习Demo
-author: &amp;ldquo;CrazyWolf&amp;rdquo;
-tags: [&amp;ldquo;golang&amp;rdquo;, &amp;ldquo;ECHO&amp;rdquo;, &amp;ldquo;web&amp;rdquo;]
-date: 2017-12-30
-​&amp;mdash;&lt;/p&gt;
-
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;此项目GIT地址 &lt;a href=&#34;https://github.com/akkagao/echodemo&#34;&gt;https://github.com/akkagao/echodemo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;此项目主要用于学习使用传说中比其他Go web框架性能高10倍的&lt;a href=&#34;https://github.com/labstack/echo&#34;&gt;ECHO&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
