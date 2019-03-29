@@ -7,7 +7,7 @@ hugo --theme=hugo-nuo --baseUrl="https://akkagao.github.io/"
 git add .
 git commit -m "`date +%Y-%m-%d:%X` public dev"
 git push
-echo "blog.crazywolf.cc" > public/CNAME
+echo "akkagao.github.io" > public/CNAME
 cp -r public ../
 git checkout master
 rm -rf *
