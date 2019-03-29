@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://akkagao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>ECHO</title>
       <link>https://akkagao.github.io/tags/echo/</link>
-      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://akkagao.github.io/tags/echo/</guid>
       <description></description>
@@ -24,9 +24,18 @@
     <item>
       <title>golang</title>
       <link>https://akkagao.github.io/tags/golang/</link>
-      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://akkagao.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://akkagao.github.io/tags/web/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://akkagao.github.io/tags/web/</guid>
       <description></description>
     </item>
     
@@ -36,15 +45,6 @@
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://akkagao.github.io/tags/goquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://akkagao.github.io/tags/web/</link>
-      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://akkagao.github.io/tags/web/</guid>
       <description></description>
     </item>
     
