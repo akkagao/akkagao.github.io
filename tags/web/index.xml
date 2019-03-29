@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on CrazyWolf - Blog</title>
+    <link>https://akkagao.github.io/tags/web/</link>
+    <description>Recent content in web on CrazyWolf - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
+    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://akkagao.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Mod 使用</title>
+      <link>https://akkagao.github.io/post/golang/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://akkagao.github.io/post/golang/</guid>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;这里应该之展示在列表中&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ECHO 学习Demo</title>
+      <link>https://akkagao.github.io/post/echodemo/</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://akkagao.github.io/post/echodemo/</guid>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;此项目GIT地址 &lt;a href=&#34;https://github.com/akkagao/echodemo&#34;&gt;https://github.com/akkagao/echodemo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;此项目主要用于学习使用传说中比其他Go web框架性能高10倍的&lt;a href=&#34;https://github.com/labstack/echo&#34;&gt;ECHO&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
